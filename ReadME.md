@@ -27,3 +27,5 @@ Most of the code online run well in a python 2 environment
 ### Non-version Problem
 * range()
 > the feedback of *range()* is range object, if you wanna a list. Transfer the `a = range(0,N)` into `a = list(range(0,N))`
+* Module *scipy.misc*
+> You may come across error report concerning to the module *scipy.misc*. The most possible solution is to install *PIL*, by `pip install -U PIL`. The specific reason can take this website as reference.  https://stackoverflow.com/questions/15345790/scipy-misc-module-has-no-attribute-imread#
