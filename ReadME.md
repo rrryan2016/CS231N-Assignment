@@ -11,6 +11,12 @@ Recommend you to read the officially .ipynb file with my file.
 
 ## Assignment 2 
 
+### My Own Designed CNN at the last
+
+The network I built is under this structure:
+<pic>
+
+
 ### Some modification of the original codes 
 
 #### Version Problem: The dfferences bewteen python 2 and 3 need to be noticed here
