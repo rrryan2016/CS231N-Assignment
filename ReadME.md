@@ -1,5 +1,7 @@
 # CS231N Assignment 
-Most of the code online run well in a python 2 environment and the original .ipynb file is not that convenient to debug or edit this project can run well in Python 3.7. 
+This is my job in CS231n assignment!
+
+Most of the code online run well in a python 2 environment and the original .ipynb file is not that convenient to debug or edit this project can run well in Python 3.7!
 
 My developing environment is Windows 10 + Pychram + Python 3.7.
 
