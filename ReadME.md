@@ -1,21 +1,44 @@
 # CS231N Assignment 
-This is my job in CS231n assignment!
+This is my job in CS231n (2016 Winter Jan-Mar) assignment!
 
-Most of the code online run well in a python 2 environment and the original .ipynb file is not that convenient to debug or edit this project can run well in Python 3.7!
+Most of the code online run well in a python 2 environment and the original .ipynb file is not that convenient to debug or edit, this project can run well in Python 3.7!
 
 My developing environment is Windows 10 + Pychram + Python 3.7.
 
-Each code block in <main.py> start with a 'start' and end with a 'end'. Please properly comment or uncomment for each function. 
+Please properly comment or uncomment for each function. Each code block start with a 'start' hint and end with a 'end' hint. For example,
+`#### Start: Test softmax and SVM in layers.py ####` & `#### End: Test softmax and SVM in layers.py ####`
 
-Recommend you to read the officially .ipynb file with my file. 
+Recommend you to read the officially .ipynb file when using my codes. 
+
+For dataset download:
+
+* Assignment 2 
+According to the instruction in official document, you can `get_datasets.sh` in \cs231n\ datasets or,
+Open this file in a plain text editing tools, and follow its instruction so as to download. 
+
+* Assignment 3 
+According to the instruction in official document, you can run `get_tiny_imagenet_a.sh` `get_pretrained_model.sh` `get_coco_captioning.sh` in \cs231n\datasets or, 
+Open these 3 files in a plain text editing tools (for example, Sublime), copy the website and start downloading dataset, unzip zipped package. 
+
+If the *pretrained_model* file end with *.txt*, you can directly rename it as `pretrained_model.h5`
 
 ## Assignment 2 
 
-### My Own Designed CNN at the last
+### Designed CNN by my Own in /classierfiers/customedCNN.py at the last
 
-The network I built is under this structure:
-<pic>
+The structure is, which is the best one among thos I tried,
+ INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC/OUT
 
+In *Train the Net*, its result is,
+`(Epoch 1 / 1) train acc: 0.470000; val_acc: 0.483000`
+
+I also tried： 
+
+ INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC --> ReLU --> FC/OUT 
+ INPUT --> [CONV --> ReLU]\*2 --> [FC --> ReLU]\*2 --> FC/OUT
+ INPUT --> [CONV --> ReLU]\*2 --> POOL --> [FC --> ReLU]\*2 --> FC/OUT
+
+These networks perform less effcient in trainning, you may need to increase the `num_epochs` in Solver().
 
 ### Some modification of the original codes 
 
@@ -56,5 +79,6 @@ The network I built is under this structure:
 
 
 ## Assignment 3 
-
 Changes of teachers' original codes are similar to that in assignment 2. 
+
+Apply *BLEU_score* as an evaluation for a good captioning model in LSTM_Captioning.
