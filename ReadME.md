@@ -8,17 +8,21 @@ My developing environment is Windows 10 + Pychram + Python 3.7.
 Please properly comment or uncomment for each function. Each code block start with a 'start' hint and end with a 'end' hint. For example,
 `#### Start: Test softmax and SVM in layers.py ####` & `#### End: Test softmax and SVM in layers.py ####`
 
-Recommend you to read the officially .ipynb file when using my codes. 
+Recommend you to read the official .ipynb file when using my codes. 
 
 For dataset download:
 
 * Assignment 2 
-According to the instruction in official document, you can `get_datasets.sh` in \cs231n\ datasets or,
-Open this file in a plain text editing tools, and follow its instruction so as to download. 
+
+According to the instruction in official document, you can run `get_datasets.sh` in \cs231n\datasets or,
+
+Open `get_datasets.sh` in a plain text editing tool, and follow its instruction so as to download. 
 
 * Assignment 3 
+
 According to the instruction in official document, you can run `get_tiny_imagenet_a.sh` `get_pretrained_model.sh` `get_coco_captioning.sh` in \cs231n\datasets or, 
-Open these 3 files in a plain text editing tools (for example, Sublime), copy the website and start downloading dataset, unzip zipped package. 
+
+Open these 3 files in a plain text editing tool (for example, Sublime), copy the website and start downloading dataset,then unzip zipped package(all as the instruction in .sh files). 
 
 If the *pretrained_model* file end with *.txt*, you can directly rename it as `pretrained_model.h5`
 
@@ -26,19 +30,22 @@ If the *pretrained_model* file end with *.txt*, you can directly rename it as `p
 
 ### Designed CNN by my Own in /classierfiers/customedCNN.py at the last
 
-The structure is, which is the best one among thos I tried,
- INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC/OUT
+The structure is, which is the best one among those I tried,
 
-In *Train the Net*, its result is,
+**INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC/OUT**
+
+In the part, *Train the Net*, its result is,
 `(Epoch 1 / 1) train acc: 0.470000; val_acc: 0.483000`
 
 I also tried： 
 
- INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC --> ReLU --> FC/OUT 
- INPUT --> [CONV --> ReLU]\*2 --> [FC --> ReLU]\*2 --> FC/OUT
- INPUT --> [CONV --> ReLU]\*2 --> POOL --> [FC --> ReLU]\*2 --> FC/OUT
+ **INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC --> ReLU --> FC/OUT **
+ 
+ **INPUT --> [CONV --> ReLU]\*2 --> [FC --> ReLU]\*2 --> FC/OUT**
+ 
+ **INPUT --> [CONV --> ReLU]\*2 --> POOL --> [FC --> ReLU]\*2 --> FC/OUT**
 
-These networks perform less effcient in trainning, you may need to increase the `num_epochs` in Solver().
+These networks perform less effcient in trainning, you may need to increase the `num_epochs` in `Solver()`.
 
 ### Some modification of the original codes 
 
@@ -81,4 +88,4 @@ These networks perform less effcient in trainning, you may need to increase the 
 ## Assignment 3 
 Changes of teachers' original codes are similar to that in assignment 2. 
 
-Apply *BLEU_score* as an evaluation for a good captioning model in LSTM_Captioning.
+I applied *BLEU_score* as an evaluation for a good captioning model in LSTM_Captioning.
