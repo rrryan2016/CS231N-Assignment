@@ -89,3 +89,5 @@ These networks perform less effcient in trainning, you may need to increase the 
 Changes of teachers' original codes are similar to that in assignment 2. 
 
 I applied *BLEU_score* as an evaluation for a good captioning model in LSTM_Captioning.
+
+中文论述请移步：https://blog.csdn.net/AAAAshin/article/details/86571869
