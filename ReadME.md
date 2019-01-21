@@ -32,14 +32,14 @@ If the *pretrained_model* file end with *.txt*, you can directly rename it as `p
 
 The structure is, which is the best one among those I tried,
 
-**INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC/OUT**
+**INPUT --> [CONV --> RELU --> POOL]\*2 --> [CONV --> RELU] --> FC/OUT**
 
 In the part, *Train the Net*, its result is,
 `(Epoch 1 / 1) train acc: 0.470000; val_acc: 0.483000`
 
 I also tried： 
 
- **INPUT --> [CONV --> RELU --> POOL]*2 --> [CONV --> RELU] --> FC --> ReLU --> FC/OUT **
+ **INPUT --> [CONV --> RELU --> POOL]\*2 --> [CONV --> RELU] --> FC --> ReLU --> FC/OUT **
  
  **INPUT --> [CONV --> ReLU]\*2 --> [FC --> ReLU]\*2 --> FC/OUT**
  
